@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"JWT","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"c'est quoi un jeton ?","c":[{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"jeton","c":[{"t":"list_item","d":6,"p":{"lines":[5,6]},"v":"chaine de caractères"},{"t":"list_item","d":6,"p":{"lines":[6,7]},"v":"jeton avec plusieurs infos"}]}]},{"t":"heading","d":2,"p":{"lines":[8,9]},"v":"JSON Web Token / JWT / JOT","c":[{"t":"list_item","d":4,"p":{"lines":[10,11]},"v":"basé sur swt avec partie JSON en plus"}]},{"t":"heading","d":2,"p":{"lines":[13,14]},"v":"Cryptographie","c":[{"t":"list_item","d":4,"p":{"lines":[15,16]},"v":"mathématiques / confiance / communication / canal non sur / non répudiation"}]},{"t":"heading","d":2,"p":{"lines":[17,18]},"v":"JWT qu'est ce que c'est","c":[{"t":"bullet_list","d":3,"p":{"lines":[19,21]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[19,20]},"v":"token.dev"},{"t":"list_item","d":4,"p":{"lines":[20,21]},"v":"jwt."}]},{"t":"heading","d":3,"p":{"lines":[23,24]},"v":"forme compacte","c":[{"t":"list_item","d":5,"p":{"lines":[25,26]},"v":"base 64: sous forme de charge"},{"t":"list_item","d":5,"p":{"lines":[26,27]},"v":"chaine de char"},{"t":"list_item","d":5,"p":{"lines":[27,28]},"v":"3 parties: entete, charge utile, signature"}]},{"t":"heading","d":3,"p":{"lines":[29,30]},"v":"sous forme JSON","c":[{"t":"list_item","d":5,"p":{"lines":[31,32]},"v":"permet d'avoir plus infos: plusieurs signatures etc."}]},{"t":"heading","d":3,"p":{"lines":[33,34]},"v":"","c":[{"t":"list_item","d":5,"p":{"lines":[35,36]},"v":"registered claims"},{"t":"list_item","d":5,"p":{"lines":[36,37]},"v":"public claims: plus d'info (normalisé par IANA)"},{"t":"list_item","d":5,"p":{"lines":[37,38]},"v":"private claims: ce que l'on veut"}]},{"t":"heading","d":3,"p":{"lines":[39,40]},"v":"jose","c":[{"t":"list_item","d":5,"p":{"lines":[41,42]},"v":"spec"},{"t":"list_item","d":5,"p":{"lines":[42,43]},"v":"JWT / JSON Web Signature / JSON Web Encryption / JSON Web Algo / JSON Web Key"}]}]},{"t":"heading","d":2,"p":{"lines":[44,45]},"v":"JWE","c":[{"t":"list_item","d":4,"p":{"lines":[46,47]},"v":"JSON Web Encryption","c":[{"t":"list_item","d":6,"p":{"lines":[47,48]},"v":"5 parties"}]}]},{"t":"heading","d":2,"p":{"lines":[49,50]},"v":"JWK","c":[{"t":"list_item","d":6,"p":{"lines":[51,52]},"v":"faire transiter les clefs / JSON Web Key"}]},{"t":"heading","d":2,"p":{"lines":[53,54]},"v":"cas d'usage","c":[{"t":"list_item","d":4,"p":{"lines":[55,56]},"v":"OAuth2"},{"t":"list_item","d":4,"p":{"lines":[56,57]},"v":"openIdConnect"},{"t":"list_item","d":4,"p":{"lines":[57,58]},"v":"session stateless","c":[{"t":"list_item","d":6,"p":{"lines":[58,59]},"v":"session côté cliente"},{"t":"list_item","d":6,"p":{"lines":[59,60]},"v":"pas simple"}]}]},{"t":"heading","d":2,"p":{"lines":[61,62]},"v":"les attaques ?","c":[{"t":"list_item","d":4,"p":{"lines":[63,64]},"v":"jeton non sécurisé","c":[{"t":"list_item","d":6,"p":{"lines":[64,65]},"v":"lib qui permette d'utiliser des jetons non sécurisés"}]},{"t":"list_item","d":4,"p":{"lines":[65,66]},"v":"autre"},{"t":"list_item","d":4,"p":{"lines":[66,67]},"v":"brute force"}]},{"t":"heading","d":2,"p":{"lines":[68,69]},"v":"conseils de secu","c":[{"t":"list_item","d":4,"p":{"lines":[70,71]},"v":"ded"},{"t":"list_item","d":4,"p":{"lines":[71,72]},"v":"na pas tout accepter","c":[{"t":"list_item","d":6,"p":{"lines":[72,73]},"v":"ne se base jamais"}]},{"t":"list_item","d":4,"p":{"lines":[73,74]},"v":"préférer l'asymétrique","c":[{"t":"list_item","d":6,"p":{"lines":[74,75]},"v":"ne pas partager de secret avec le partenaire"}]},{"t":"list_item","d":4,"p":{"lines":[75,76]},"v":"utiliser des libs pour manipuler les token"},{"t":"list_item","d":4,"p":{"lines":[76,77]},"v":"ne pas se battre pour révoquer les JWT","c":[{"t":"list_item","d":6,"p":{"lines":[77,78]},"v":"fais pour être autonome: essayer d'éviter les révocations"}]},{"t":"list_item","d":4,"p":{"lines":[78,79]},"v":"ne pas se baser sur l'algo du header"}]},{"t":"heading","d":2,"p":{"lines":[80,81]},"v":"confidentialité","c":[{"t":"list_item","d":4,"p":{"lines":[82,83]},"v":"c'est en clair (les infos sont en base64)"},{"t":"list_item","d":4,"p":{"lines":[83,84]},"v":"infos nécessaires et suffisantes"},{"t":"list_item","d":4,"p":{"lines":[84,85]},"v":"https <strong>uniquement</strong>"}]},{"t":"heading","d":2,"p":{"lines":[86,87]},"v":"alternatives","c":[{"t":"list_item","d":4,"p":{"lines":[88,89]},"v":"biscuit"},{"t":"list_item","d":4,"p":{"lines":[89,90]},"v":"paseto"},{"t":"list_item","d":4,"p":{"lines":[90,91]},"v":"macarons"},{"t":"list_item","d":4,"p":{"lines":[91,92]},"v":"branca"}]}]})</script>
+</body>
+</html>

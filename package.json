@@ -1,9 +1,14 @@
 {
   "name": "devoxx2022",
   "version": "0.1.0",
-  "description": "Notes & feedback on devoxx paris 2022 conference",
+  "description": "Notes & feedback on Devoxx Paris 2022 conference",
   "license": "MIT",
+  "scripts": {
+    "mindmaps:clean": "rm *.mm.html",
+    "mindmaps:gen": "glob-run 'markmap *.mm.md --no-open --no-toolbar'"
+  },
   "dependencies": {
+    "glob-run": "^0.1.7",
     "markmap-cli": "^0.5.4",
     "markmap-lib": "^0.12.0"
   }

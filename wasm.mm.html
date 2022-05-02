@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"&quot;La révolution Wasm est incroyabel parceque vraie&quot;","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Historique","c":[{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"du html simple, flash, activeX etc."},{"t":"list_item","d":4,"p":{"lines":[5,6]},"v":"reste JS uniquement"}]},{"t":"heading","d":2,"p":{"lines":[7,8]},"v":"principe de fonctionnement js","c":[{"t":"list_item","d":4,"p":{"lines":[9,10]},"v":"browser =&gt; [parse] AST =&gt; [] =&gt; ByteCode","c":[{"t":"list_item","d":6,"p":{"lines":[10,11]},"v":"parsing","c":[{"t":"list_item","d":8,"p":{"lines":[11,12]},"v":"AST"}]}]}]},{"t":"heading","d":2,"p":{"lines":[13,14]},"v":"ASM.js","c":[{"t":"list_item","d":4,"p":{"lines":[15,16]},"v":"js subset très optimisé, par mozilla"},{"t":"list_item","d":4,"p":{"lines":[16,17]},"v":"compilateur C++ =&gt;"}]},{"t":"heading","d":2,"p":{"lines":[18,19]},"v":"webAssembly : wasm","c":[{"t":"list_item","d":4,"p":{"lines":[20,21]},"v":"objectif: performance etc."},{"t":"list_item","d":4,"p":{"lines":[21,22]},"v":"ne remplace pas le js: complémentaire"},{"t":"list_item","d":4,"p":{"lines":[22,23]},"v":"webassembly.org"},{"t":"list_item","d":4,"p":{"lines":[23,24]},"v":"format portable (comme java ou .Net) =&gt; execution ou l'on veut","c":[{"t":"list_item","d":6,"p":{"lines":[24,25]},"v":"origine cible: browser"}]},{"t":"list_item","d":4,"p":{"lines":[25,26]},"v":"polyglotte: C/C++ / rust / GoLang, Swift, AssemblyScript, etc."}]},{"t":"heading","d":2,"p":{"lines":[27,28]},"v":"Fonctionnement","c":[{"t":"list_item","d":4,"p":{"lines":[29,30]},"v":"limitations: par défaut pas"}]},{"t":"heading","d":2,"p":{"lines":[31,32]},"v":"usages actuels","c":[{"t":"list_item","d":4,"p":{"lines":[33,34]},"v":"portabilité: jeux videos, cartographie, ML, chiffrement, OCR etc.","c":[{"t":"list_item","d":6,"p":{"lines":[34,35]},"v":"autocad, python CLI, sqlite etc."}]},{"t":"list_item","d":4,"p":{"lines":[35,36]},"v":"faas (function as a service): sorte de container spécifique"}]},{"t":"heading","d":2,"p":{"lines":[37,38]},"v":"formats","c":[{"t":"list_item","d":4,"p":{"lines":[39,40]},"v":"wasm: binaire"},{"t":"list_item","d":4,"p":{"lines":[40,41]},"v":"wat: format textuel, format utilisé avant le format binaire"}]}]})</script>
+</body>
+</html>

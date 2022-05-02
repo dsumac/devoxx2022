@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"CI/CD, le divorce est-il prononcé","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"historique","c":[{"t":"heading","d":3,"p":{"lines":[4,5]},"v":"CI","c":[{"t":"list_item","d":5,"p":{"lines":[6,7]},"v":"rappel sur les étapes (d'abord build etc.)"}]},{"t":"heading","d":3,"p":{"lines":[8,9]},"v":"CD","c":[{"t":"list_item","d":5,"p":{"lines":[10,11]},"v":"plusieurs def","c":[{"t":"list_item","d":7,"p":{"lines":[11,12]},"v":"delivery","c":[{"t":"list_item","d":9,"p":{"lines":[12,13]},"v":"mettre un livrable à dispo"}]},{"t":"list_item","d":7,"p":{"lines":[13,14]},"v":"deployement","c":[{"t":"list_item","d":9,"p":{"lines":[14,15]},"v":"..."}]},{"t":"list_item","d":7,"p":{"lines":[15,16]},"v":"development","c":[{"t":"list_item","d":9,"p":{"lines":[16,17]},"v":"rendre le dev en prod directement"}]}]}]}]},{"t":"heading","d":2,"p":{"lines":[18,19]},"v":"CI + CD","c":[{"t":"bullet_list","d":3,"p":{"lines":[20,24]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[20,21]},"v":"rencontre des 2: pipeline","c":[{"t":"list_item","d":6,"p":{"lines":[21,22]},"v":"dessin"},{"t":"list_item","d":6,"p":{"lines":[22,23]},"v":"des gens autours"}]}]},{"t":"heading","d":3,"p":{"lines":[24,25]},"v":"démarche","c":[{"t":"list_item","d":5,"p":{"lines":[26,27]},"v":"définir obj. et contraintes"},{"t":"list_item","d":5,"p":{"lines":[27,28]},"v":"définir étapes","c":[{"t":"list_item","d":7,"p":{"lines":[28,29]},"v":"eventstorming"}]},{"t":"list_item","d":5,"p":{"lines":[29,30]},"v":"définir feedbacks à remonter"},{"t":"list_item","d":5,"p":{"lines":[30,31]},"v":"choisir des outils"},{"t":"list_item","d":5,"p":{"lines":[31,32]},"v":"implémenter les pipelines","c":[{"t":"list_item","d":7,"p":{"lines":[32,33]},"v":"commencer petit"},{"t":"list_item","d":7,"p":{"lines":[33,34]},"v":"dessiner pipeline"}]}]},{"t":"heading","d":3,"p":{"lines":[35,36]},"v":"élément perturbateur","c":[{"t":"list_item","d":5,"p":{"lines":[37,38]},"v":"everything as code","c":[{"t":"list_item","d":7,"p":{"lines":[38,39]},"v":"tous dans le code"}]},{"t":"list_item","d":5,"p":{"lines":[39,40]},"v":"peu devenir compliqué / illisible"}]},{"t":"heading","d":3,"p":{"lines":[41,42]},"v":"comment aider ?","c":[{"t":"list_item","d":5,"p":{"lines":[43,44]},"v":"thérapie de couple =&gt; CI &amp; CD"},{"t":"list_item","d":5,"p":{"lines":[44,45]},"v":"DRY","c":[{"t":"list_item","d":7,"p":{"lines":[45,46]},"v":"factoriser du code mais .... pas trop loin"}]},{"t":"list_item","d":5,"p":{"lines":[46,47]},"v":"SOLID","c":[{"t":"list_item","d":7,"p":{"lines":[47,48]},"v":"S single resp. décpoupage: ex un job de deploy qui fait plusieurs composants =&gt; faire un job par composant"},{"t":"list_item","d":7,"p":{"lines":[48,49]},"v":"O :"},{"t":"list_item","d":7,"p":{"lines":[49,50]},"v":"L : rien"},{"t":"list_item","d":7,"p":{"lines":[50,51]},"v":"I (interface segregation): découpage"},{"t":"list_item","d":7,"p":{"lines":[51,52]},"v":"D (dependency inversion): on ne veut pas découper contrat, ex: job qui fait le deploy ne se préoccupe pas du build avant mais du fait que l'artefact est lisible / accessible"}]}]},{"t":"heading","d":3,"p":{"lines":[53,54]},"v":"feedback","c":[{"t":"list_item","d":5,"p":{"lines":[55,56]},"v":"devops est bien le rapprochement de CI &amp; CD"},{"t":"list_item","d":5,"p":{"lines":[56,57]},"v":"accompagnateurs"},{"t":"list_item","d":5,"p":{"lines":[57,58]},"v":"question de comm."}]},{"t":"heading","d":3,"p":{"lines":[59,60]},"v":"le point / les possibilités","c":[{"t":"list_item","d":5,"p":{"lines":[61,62]},"v":"séparation CI / CD","c":[{"t":"list_item","d":7,"p":{"lines":[62,63]},"v":"CI construction / assemblage"},{"t":"list_item","d":7,"p":{"lines":[63,64]},"v":"CD mise en service / règles"},{"t":"list_item","d":7,"p":{"lines":[64,65]},"v":"peut-être une étape"}]},{"t":"list_item","d":5,"p":{"lines":[65,66]},"v":"une équipe de médiation devops"},{"t":"list_item","d":5,"p":{"lines":[66,67]},"v":"intégration culture devops","c":[{"t":"list_item","d":7,"p":{"lines":[67,68]},"v":"plus compliqué"}]}]}]}]})</script>
+</body>
+</html>

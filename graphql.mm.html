@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"graphql","c":[{"t":"heading","d":2,"p":{"lines":[3,4]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[5,6]},"v":"protocole particulier"},{"t":"list_item","d":4,"p":{"lines":[6,7]},"v":"très souvent &quot;over http&quot; (pas obligatoire)","c":[{"t":"list_item","d":6,"p":{"lines":[7,8]},"v":"POST tout le temps (des moyens de contournement existent)"}]}]},{"t":"heading","d":2,"p":{"lines":[9,10]},"v":"modeles &quot;archi / orga&quot;","c":[{"t":"heading","d":3,"p":{"lines":[11,12]},"v":"monolithe devant N &quot;api services&quot;"},{"t":"heading","d":3,"p":{"lines":[13,14]},"v":"composition","c":[{"t":"bullet_list","d":4,"p":{"lines":[15,21]},"v":"","c":[{"t":"list_item","d":5,"p":{"lines":[15,16]},"v":"sorte de reverse proxy graphql (stitching)","c":[{"t":"list_item","d":7,"p":{"lines":[16,17]},"v":"presque tout le temps en nodeJs"}]},{"t":"list_item","d":5,"p":{"lines":[17,18]},"v":"sous schémas","c":[{"t":"list_item","d":7,"p":{"lines":[18,19]},"v":"séparation des résponsabilités (sorte de bff graphql)"}]},{"t":"list_item","d":5,"p":{"lines":[19,20]},"v":"passent tous par <strong>une</strong> gateway"}]},{"t":"heading","d":4,"p":{"lines":[21,22]},"v":"stitching","c":[{"t":"list_item","d":6,"p":{"lines":[23,24]},"v":"équipe s'occupant de la gateway: <strong>bottleneck</strong>","c":[{"t":"list_item","d":8,"p":{"lines":[24,25]},"v":"unique point d'entrée"}]},{"t":"list_item","d":6,"p":{"lines":[26,27]},"v":"autre solution: <strong>router</strong>","c":[{"t":"list_item","d":8,"p":{"lines":[27,28]},"v":"chez apollo, sorte de réceptacle et d'agrégateur de schéma + outil CI"}]}]}]}]}]})</script>
+</body>
+</html>

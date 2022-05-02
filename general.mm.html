@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Sujets et autre axes généraux","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Pratiques de dev","c":[{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"TDD =&gt; TCR &quot;Test &amp;&amp; commit || revert&quot; (2018)","c":[{"t":"list_item","d":6,"p":{"lines":[5,6]},"v":"https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864"}]}]},{"t":"heading","d":2,"p":{"lines":[7,8]},"v":"Tooling","c":[{"t":"list_item","d":4,"p":{"lines":[9,10]},"v":"<a href=\"https://nixos.org/\">nix</a>","c":[{"t":"list_item","d":6,"p":{"lines":[10,11]},"v":"gérer ses envs de travail avec ce type d'outillage"},{"t":"list_item","d":6,"p":{"lines":[11,12]},"v":"https://cfp.devoxx.fr/2022/talk/HHI-0608/Gerer_ses_environnements_de_travail_avec_Nix"}]}]}]})</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Comment j'ai aidé ma fille à lire avec le machin learning","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Genèse","c":[{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"aide sa fille a lire au début du CP","c":[{"t":"list_item","d":6,"p":{"lines":[5,6]},"v":"avec le doigt pour le déchiffrement etc."}]},{"t":"list_item","d":4,"p":{"lines":[6,7]},"v":"tilt dans sa tête car travaille chez orange sur data et ML"}]},{"t":"heading","d":2,"p":{"lines":[8,9]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[10,11]},"v":"focalisation sur voix d'enfant"},{"t":"list_item","d":4,"p":{"lines":[11,12]},"v":"application web","c":[{"t":"list_item","d":6,"p":{"lines":[12,13]},"v":"speech to text"},{"t":"list_item","d":6,"p":{"lines":[13,14]},"v":"machine learning"}]},{"t":"list_item","d":4,"p":{"lines":[14,15]},"v":"contrainte technique: 100% web (navigateur)","c":[{"t":"list_item","d":6,"p":{"lines":[15,16]},"v":"privacy by design"},{"t":"list_item","d":6,"p":{"lines":[16,17]},"v":"pas d'appels api"}]}]},{"t":"heading","d":2,"p":{"lines":[18,19]},"v":"l'apprentissage de la lecture","c":[{"t":"list_item","d":4,"p":{"lines":[20,21]},"v":"processus en plusieurs étapes: 7"}]},{"t":"heading","d":2,"p":{"lines":[22,23]},"v":"focus sur 'fusion syllabique'"},{"t":"heading","d":2,"p":{"lines":[24,25]},"v":"richesse du français","c":[{"t":"list_item","d":4,"p":{"lines":[26,27]},"v":"26 lettres"},{"t":"list_item","d":4,"p":{"lines":[27,28]},"v":"36 phonèmes (voyelles, semi-voyelles, consonnes)"},{"t":"list_item","d":4,"p":{"lines":[28,29]},"v":"190 graphèmes (ex: o/au/eau)"}]},{"t":"heading","d":2,"p":{"lines":[30,31]},"v":"ML / sous catégorie de l'IA","c":[{"t":"list_item","d":4,"p":{"lines":[32,33]},"v":"algo décrouvrant des patterns"},{"t":"list_item","d":4,"p":{"lines":[34,35]},"v":"apprentissage supervisé - task driven (onéreux)"},{"t":"list_item","d":4,"p":{"lines":[35,36]},"v":"apprentissage non-supervisé - task driven (onéreux)"},{"t":"list_item","d":4,"p":{"lines":[36,37]},"v":"apprentissage par renforcement - apprends de ses erreurs"}]},{"t":"heading","d":2,"p":{"lines":[38,39]},"v":"speech to text","c":[{"t":"list_item","d":4,"p":{"lines":[40,41]},"v":"entrainé avec des voix d'adultes (presque tout le temps)","c":[{"t":"list_item","d":6,"p":{"lines":[41,42]},"v":"or ici on parle d'un cas d'usage pour enfant"}]}]},{"t":"heading","d":2,"p":{"lines":[43,44]},"v":"construction du modèle","c":[{"t":"list_item","d":4,"p":{"lines":[45,46]},"v":"de zero"},{"t":"list_item","d":4,"p":{"lines":[46,47]},"v":"par transfer learning : ce choix est retenu"}]},{"t":"heading","d":2,"p":{"lines":[48,49]},"v":"outillage","c":[{"t":"list_item","d":4,"p":{"lines":[50,51]},"v":"tensorflow (js / python)"},{"t":"list_item","d":4,"p":{"lines":[51,52]},"v":"outil de collecte de son: en web, petite app de collecte de son"},{"t":"list_item","d":4,"p":{"lines":[52,53]},"v":"interface de liste de fichier, permettant de retoucher les sons"}]},{"t":"heading","d":2,"p":{"lines":[55,56]},"v":"..."},{"t":"heading","d":2,"p":{"lines":[58,59]},"v":"perspectives","c":[{"t":"list_item","d":4,"p":{"lines":[60,61]},"v":"scaling du modèle"},{"t":"list_item","d":4,"p":{"lines":[61,62]},"v":"gamification"}]},{"t":"heading","d":2,"p":{"lines":[63,64]},"v":"bilan","c":[{"t":"list_item","d":4,"p":{"lines":[65,66]},"v":"approche test, fail &amp; learn"},{"t":"list_item","d":4,"p":{"lines":[66,67]},"v":"ML assez passionnant (openAI etc.)"},{"t":"list_item","d":4,"p":{"lines":[67,68]},"v":"bonne aventure technique"}]},{"t":"heading","d":2,"p":{"lines":[69,70]},"v":"plus","c":[{"t":"list_item","d":4,"p":{"lines":[71,72]},"v":"teachablemachine.withgoogle.com"}]}]})</script>
+</body>
+</html>

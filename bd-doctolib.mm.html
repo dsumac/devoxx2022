@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Doctolib","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"architecture","c":[{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"boring architecture","c":[{"t":"list_item","d":6,"p":{"lines":[5,6]},"v":"archi <strong>simple</strong> by design"}]},{"t":"list_item","d":4,"p":{"lines":[7,8]},"v":"approche pragmatique"},{"t":"list_item","d":4,"p":{"lines":[9,10]},"v":"ruby on rails"}]},{"t":"heading","d":2,"p":{"lines":[11,12]},"v":"evolution","c":[{"t":"list_item","d":4,"p":{"lines":[13,14]},"v":"simple BDs Heroku"},{"t":"list_item","d":4,"p":{"lines":[14,15]},"v":"bare metal chez hebergeur =&gt; raisons légales"},{"t":"list_item","d":4,"p":{"lines":[15,16]},"v":"cloud aws","c":[{"t":"list_item","d":6,"p":{"lines":[16,17]},"v":"aurora: postgresql avec couche &quot;shared storage&quot; spécifique aws","c":[{"t":"list_item","d":8,"p":{"lines":[17,18]},"v":"distribuée"}]}]}]},{"t":"heading","d":2,"p":{"lines":[19,20]},"v":"why aurora","c":[{"t":"list_item","d":4,"p":{"lines":[21,22]},"v":"100% postgresql"},{"t":"list_item","d":4,"p":{"lines":[22,23]},"v":"auto scaling"},{"t":"list_item","d":4,"p":{"lines":[23,24]},"v":"low replication =&gt; simplifie le développement"},{"t":"list_item","d":4,"p":{"lines":[24,25]},"v":"multi region"}]},{"t":"heading","d":2,"p":{"lines":[27,28]},"v":"PG expertise on App side","c":[{"t":"list_item","d":4,"p":{"lines":[29,30]},"v":"code spécifique dans l'app sur le moteur"}]},{"t":"heading","d":2,"p":{"lines":[31,32]},"v":"tests de charge","c":[{"t":"list_item","d":4,"p":{"lines":[33,34]},"v":"approche pragmatique: est-ce qu'il est temps de ne rien faire","c":[{"t":"list_item","d":6,"p":{"lines":[34,35]},"v":"tests avec traffic * 2 =&gt; si OK on ne fait rien"}]}]},{"t":"heading","d":2,"p":{"lines":[36,37]},"v":"au moment du &quot;covid&quot;","c":[{"t":"list_item","d":4,"p":{"lines":[38,39]},"v":"tests de charge =&gt; ne permettait de voir les problèmes","c":[{"t":"list_item","d":6,"p":{"lines":[39,40]},"v":"car cas d'usage 'prise de rendez-vous' pas dans les cas de test"}]},{"t":"list_item","d":4,"p":{"lines":[40,41]},"v":"base aurora <em>déjà au max</em>"}]},{"t":"heading","d":2,"p":{"lines":[42,43]},"v":"les options pour la suite","c":[{"t":"list_item","d":4,"p":{"lines":[44,45]},"v":"plan A: swith to a bigger database"},{"t":"list_item","d":4,"p":{"lines":[45,46]},"v":"plan B: split database"}]},{"t":"heading","d":2,"p":{"lines":[47,48]},"v":"database plus grosse","c":[{"t":"list_item","d":4,"p":{"lines":[49,50]},"v":"postgresql ou 99% compatible"},{"t":"list_item","d":4,"p":{"lines":[50,52]},"v":"","c":[{"t":"list_item","d":6,"p":{"lines":[50,51]},"v":"10 à long terme (pas * 2)"}]}]},{"t":"heading","d":2,"p":{"lines":[52,53]},"v":"methodologie","c":[{"t":"list_item","d":4,"p":{"lines":[54,55]},"v":"shortlist","c":[{"t":"list_item","d":6,"p":{"lines":[55,56]},"v":"pick candidates: spanner, yugabyte, citrus MX, vites"}]},{"t":"list_item","d":4,"p":{"lines":[56,57]},"v":"même étapes de tests tous les candidats"}]},{"t":"heading","d":2,"p":{"lines":[58,59]},"v":"solutions étudiées","c":[{"t":"heading","d":3,"p":{"lines":[60,61]},"v":"Spanner","c":[{"t":"list_item","d":5,"p":{"lines":[62,63]},"v":"cons","c":[{"t":"list_item","d":7,"p":{"lines":[63,64]},"v":"lot of simple <strong>rewrites =&gt; 50%</strong>"},{"t":"list_item","d":7,"p":{"lines":[64,65]},"v":"uniquement chez google"}]}]},{"t":"heading","d":3,"p":{"lines":[66,67]},"v":"citus MX","c":[{"t":"list_item","d":5,"p":{"lines":[68,69]},"v":"need to rewrite lot of code"},{"t":"list_item","d":5,"p":{"lines":[69,70]},"v":"limitation TODO..."}]},{"t":"heading","d":3,"p":{"lines":[71,72]},"v":"yugabyte","c":[{"t":"list_item","d":5,"p":{"lines":[73,74]},"v":"pas d'autoscaling"},{"t":"list_item","d":5,"p":{"lines":[74,75]},"v":"assez cher"}]}]},{"t":"heading","d":2,"p":{"lines":[77,78]},"v":"finalement","c":[{"t":"list_item","d":4,"p":{"lines":[79,81]},"v":"postgresql =&gt; peu aller très loin (très performant)<br>\n..."}]},{"t":"heading","d":2,"p":{"lines":[82,83]},"v":"la suite","c":[{"t":"list_item","d":4,"p":{"lines":[84,85]},"v":"plan A: toujours en étude"},{"t":"list_item","d":4,"p":{"lines":[85,86]},"v":"plan B: split the database","c":[{"t":"list_item","d":6,"p":{"lines":[86,87]},"v":"continue la dessus"},{"t":"list_item","d":6,"p":{"lines":[87,88]},"v":"..."}]}]}]})</script>
+</body>
+</html>

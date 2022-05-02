@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Model Driven Design","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Contexte","c":[{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"rachat de la société de gestion de ticket / places de"}]},{"t":"heading","d":2,"p":{"lines":[6,7]},"v":"démarche d'ateliers séquentiels","c":[{"t":"bullet_list","d":3,"p":{"lines":[8,9]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[8,9]},"v":"vocabulaire spécifique ?"}]},{"t":"bullet_list","d":3,"p":{"lines":[11,15]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[11,12]},"v":"event storming"},{"t":"list_item","d":4,"p":{"lines":[12,13]},"v":"example mapping (atelier venant du DDD)"},{"t":"list_item","d":4,"p":{"lines":[13,14]},"v":"responsability mapping"}]},{"t":"heading","d":3,"p":{"lines":[15,16]},"v":"impacts","c":[{"t":"list_item","d":5,"p":{"lines":[17,18]},"v":"tout cela a un impact sur le cerveau car concept mentaux &quot;&quot;"}]},{"t":"heading","d":3,"p":{"lines":[19,20]},"v":"avantages"}]},{"t":"heading","d":2,"p":{"lines":[22,23]},"v":"MDD","c":[{"t":"bullet_list","d":3,"p":{"lines":[24,27]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[24,25]},"v":"deepl model:"},{"t":"list_item","d":4,"p":{"lines":[25,26]},"v":"supple model"}]},{"t":"heading","d":3,"p":{"lines":[27,28]},"v":"2 roles pour les devs","c":[{"t":"list_item","d":5,"p":{"lines":[29,30]},"v":"modeling developer / deep model"},{"t":"list_item","d":5,"p":{"lines":[30,31]},"v":"build dev / supple design"}]}]},{"t":"heading","d":2,"p":{"lines":[32,33]},"v":"demo livecoding","c":[{"t":"list_item","d":4,"p":{"lines":[34,35]},"v":"les value object sont &quot;nos meilleurs amis&quot;","c":[{"t":"list_item","d":6,"p":{"lines":[35,36]},"v":"permet d'encapsuler les primitives et de garder le code lié au domaine"}]}]},{"t":"heading","d":2,"p":{"lines":[37,38]},"v":"En pratique","c":[{"t":"list_item","d":4,"p":{"lines":[39,40]},"v":"il faut prendre du temps / on ne peut courir pour faire cela"},{"t":"list_item","d":4,"p":{"lines":[40,41]},"v":"à force de communiquer"}]}]})</script>
+</body>
+</html>
